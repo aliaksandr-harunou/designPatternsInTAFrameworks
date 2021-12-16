@@ -1,0 +1,34 @@
+{
+  "name": "module-9",
+  "version": "1.0.0",
+  "description": "TA framework creaction",
+  "main": "index.js",
+  "scripts": {
+    "remove-logs": "node ./test/logs/cleanup/logsCleaner.js",
+    "postinstall": "webdriver-manager update",
+    "pretest": "npm run remove-logs",
+    "test": "protractor ./test/config/protractor.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aliaksandr-harunou/module-9.git"
+  },
+  "keywords": [
+    "logger",
+    "report"
+  ],
+  "author": "Aliaksandr Harunou",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aliaksandr-harunou/module-9/issues"
+  },
+  "homepage": "https://github.com/aliaksandr-harunou/module-9#readme",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.1.3",
+    "mochawesome": "^7.0.1",
+    "moment": "^2.29.1",
+    "protractor": "^7.0.0",
+    "winston": "^3.3.3"
+  }
+}
