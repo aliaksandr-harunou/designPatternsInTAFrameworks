@@ -6,7 +6,11 @@ npm install
 ```
 file: test -> utils -> pageObjects -> login_page -> credentials.js
 ```
-# run tests
+# run parallel tests
 ```
-npm run test
+npm run test -- --suite=full --instances 2
+```
+# generate allure report
+```
+npm run report
 ```
