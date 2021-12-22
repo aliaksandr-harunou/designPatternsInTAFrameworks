@@ -7,15 +7,11 @@ exports.config = {
 
     framework: 'mocha',
 
-    specs: [
-        '../specs/*.js'
-    ],
-
-    // suites: {
-    //     homepage: 'tests/e2e/homepage/**/*Spec.js',
-    //     search: ['tests/e2e/contact_search/**/*Spec.js',
-    //       'tests/e2e/venue_search/**/*Spec.js']
-    // },
+    suites: {
+        appreciationsBadges: '../specs/appreciationsBadges/*.js',
+        recentBadges: '../specs/recentBadges/*.js',
+        full:'../specs/*/*.js'
+    },
 
     multiCapabilities: [
     {
@@ -25,14 +21,7 @@ exports.config = {
     }
     ],
     mochaOpts: {
-        reporter: 'mochawesome',
-        reporterOptions: {
-            overwrite: true,
-            reportTitle: 'TEST EPAM HEROES PAGE',
-            reportPageTitle: 'TEST EPAM HEROES PAGE',
-            reportDir: 'test/report',
-            autoOpen: false
-        },
+        reporter: 'mocha-allure-reporter',
         timeout: 70000
     }
 };

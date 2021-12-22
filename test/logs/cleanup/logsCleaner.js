@@ -5,6 +5,7 @@ const logger = require('../../../test/config/logger.config');
 moment.locale('ru');
 let currentDateMinusTwoDays = moment().clone().subtract(2, 'days').format('L');
 const logsLocation = path.resolve(`./test/logs/info_[${currentDateMinusTwoDays}].log`);
+const testResultsLocation = path.resolve(`./allure-results`);
 
 fsextra.exists(logsLocation, function (exists) {
     if (exists) {
@@ -14,3 +15,13 @@ fsextra.exists(logsLocation, function (exists) {
         logger.info(`File 'info[${currentDateMinusTwoDays}].log' not found`);
     }
 });
+
+fsextra.exists(testResultsLocation, function (exists) {
+    if (exists) {
+        logger.info(`Deleting previous test results`);
+        fsextra.rmdirSync(testResultsLocation, { recursive: true });
+    } else {
+        logger.info(`Not test results found`);
+    }
+});
+

@@ -36,6 +36,8 @@ node_modules/
 jspm_packages/
 mochawesome-report/
 test/report/
+allure-report/
+allure-results/
 
 # TypeScript v1 declaration files
 typings/

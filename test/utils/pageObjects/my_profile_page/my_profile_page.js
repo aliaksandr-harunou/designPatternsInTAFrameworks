@@ -21,6 +21,10 @@ class MyProfilePage extends BasePage {
   getCountOfRecentBadges() {
     return this.recentBadgesSection.getCount();
   }
+
+  getCountOfAppriciationsBadges() {
+    return this.appriciationsSection.getCount();
+  }
 };
 
 module.exports = MyProfilePage;
