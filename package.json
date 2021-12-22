@@ -1,5 +1,5 @@
 {
-  "name": "module-9",
+  "name": "module-10",
   "version": "1.0.0",
   "description": "TA framework creaction",
   "main": "index.js",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aliaksandr-harunou/module-9.git"
+    "url": "git+https://github.com/aliaksandr-harunou/module-10.git"
   },
   "keywords": [
     "logger",
@@ -21,9 +21,9 @@
   "author": "Aliaksandr Harunou",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/aliaksandr-harunou/module-9/issues"
+    "url": "https://github.com/aliaksandr-harunou/module-10/issues"
   },
-  "homepage": "https://github.com/aliaksandr-harunou/module-9#readme",
+  "homepage": "https://github.com/aliaksandr-harunou/module-10#readme",
   "devDependencies": {
     "chai": "^4.3.4",
     "mocha": "^9.1.3",
