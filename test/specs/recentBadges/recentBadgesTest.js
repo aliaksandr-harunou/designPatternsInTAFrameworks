@@ -24,7 +24,7 @@ describe("My Profile - Recent badges section", function () {
         const signInButton = await loginPage.signInButton.element;
         const signInButtonName = await loginPage.signInButton.elementName;
         await mauseClick(signInButton, signInButtonName);
-        await wait(8);
+        await wait(10);
         await loginPage.clickSendMePush();
         const yesButton = await microsoftLoginPage.yesButton.element;
         const yesButtonName = await microsoftLoginPage.yesButton.elementName;

@@ -6,6 +6,7 @@ moment.locale('ru');
 let currentDateMinusTwoDays = moment().clone().subtract(2, 'days').format('L');
 const logsLocation = path.resolve(`./test/logs/info_[${currentDateMinusTwoDays}].log`);
 const testResultsLocation = path.resolve(`./allure-results`);
+const testReportLocation = path.resolve(`./allure-report`);
 
 fsextra.exists(logsLocation, function (exists) {
     if (exists) {
@@ -21,7 +22,16 @@ fsextra.exists(testResultsLocation, function (exists) {
         logger.info(`Deleting previous test results`);
         fsextra.rmdirSync(testResultsLocation, { recursive: true });
     } else {
-        logger.info(`Not test results found`);
+        logger.info(`No test results found`);
+    }
+});
+
+fsextra.exists(testReportLocation, function (exists) {
+    if (exists) {
+        logger.info(`Deleting previous test report`);
+        fsextra.rmdirSync(testReportLocation, { recursive: true });
+    } else {
+        logger.info(`No test reports found`);
     }
 });
 
