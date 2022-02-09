@@ -7,8 +7,8 @@
     "remove-logs": "node ./test/logs/cleanup/logsCleaner.js",
     "postinstall": "webdriver-manager update",
     "pretest": "npm run remove-logs",
-    "test": "protractor ./test/config/protractor.config.js",  
-    "report": "allure generate allure-results --clean -o allure-report && allure open allure-report"   
+    "test": "protractor ./test/config/protractor.config.js",
+    "report": "allure generate allure-results --clean -o allure-report && allure open allure-report"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
   "homepage": "https://github.com/aliaksandr-harunou/module-10#readme",
   "devDependencies": {
     "chai": "^4.3.4",
+    "fs-extra": "^10.0.0",
     "mocha": "^9.1.3",
     "mocha-allure-reporter": "^1.4.0",
     "moment": "^2.29.1",

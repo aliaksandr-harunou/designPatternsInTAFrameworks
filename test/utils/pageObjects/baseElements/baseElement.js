@@ -1,9 +1,17 @@
-const logger = require('../../../../test/config/logger.config.js');
+const logger = require('../../../config/logger.config.js');
 const {highlight} = require('../../helpers/actionsFunctions');
 
 class Element {
-    constructor(elementName, selector) {
-        this.element = element(by.css(selector));
+    constructor(elementName, selectorType, selector) {
+        if (selectorType === "CSS") {
+            this.element = element(by.css(selector));
+        } else if (selectorType === "XPATH") {
+            this.element = element(by.xpath(selector));
+        } else if (selectorType === "ID") {
+            this.element = element(by.id(selector));
+        } else if (selectorType === "CLASS") {
+            this.element = element(by.className(selector));
+        }       
         this.elementName = elementName;
     }
     

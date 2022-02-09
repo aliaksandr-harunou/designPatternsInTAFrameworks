@@ -1,14 +1,14 @@
-const BasePage = require("../base_page/base_page");
-const Collection = require("../base_elements/base_collection");
-const logger = require('../../../../test/config/logger.config.js');
+const BasePage = require("../basePage/basePage");
+const Collection = require("../baseElements/baseCollection");
+const logger = require('../../../config/logger.config.js');
 const EC = protractor.ExpectedConditions;
 
 class MyProfilePage extends BasePage {
   constructor() {
     super();
-    this.recentBadgesSection = new Collection("Recent badges", ".RecentBadges_badge__X_jPW");
-    this.categorizedBadges = new Collection("Categorized Badges", "ul.CategorizedBadges_badgesList__z8gqy");
-    this.appriciationsSection = new Collection("Appreciations", "#badges-container > div.CategorizedBadges_categorizedBadges__1nlXD > div:nth-child(4) > ul > li");
+    this.recentBadgesSection = new Collection("Recent badges", "CSS", ".RecentBadges_badge__X_jPW");
+    this.categorizedBadges = new Collection("Categorized Badges", "CSS", "ul.CategorizedBadges_badgesList__z8gqy");
+    this.appriciationsSection = new Collection("Appreciations", "CSS", "#badges-container > div.CategorizedBadges_categorizedBadges__1nlXD > div:nth-child(4) > ul > li");
 
   };
 

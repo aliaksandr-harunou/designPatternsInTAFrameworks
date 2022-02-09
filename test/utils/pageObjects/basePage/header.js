@@ -1,12 +1,12 @@
-const Element = require("../base_elements/base_element");
-const Collection = require("../base_elements/base_collection");
+const Element = require("../baseElements/baseElement");
+const Collection = require("../baseElements/baseCollection");
 const EC = protractor.ExpectedConditions;
 
 class Header {
     constructor() {
-        this.navigationButtons = new Collection("Navigation Buttons", ".uui-caption");
-        this.giveBadgeButton = new Element("Give Badge Button", "#heroesGiveBadge");
-        this.searchField = new Element("Search for a person", ".uui-input");
+        this.navigationButtons = new Collection("Navigation Buttons", "CSS", ".uui-caption");
+        this.giveBadgeButton = new Element("Give Badge Button", "CSS", "#heroesGiveBadge");
+        this.searchField = new Element("Search for a person", "CSS", ".uui-input");
     };
 
     async clickGiveBadgeButton(){
